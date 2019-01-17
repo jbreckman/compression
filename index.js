@@ -103,6 +103,8 @@ function compression (options) {
         this._implicitHeader()
       }
 
+      res.flush()
+
       if (!stream) {
         return _end.call(this, chunk, encoding)
       }
